@@ -43,6 +43,25 @@ const testCases: {
 		result: 'value1'
 	},
 	{
+		parameters: [
+			{
+				key1: [
+					{
+						x: 777
+					},
+					{
+						x: 888
+					},
+					{
+						x: 999
+					}
+				]
+			},
+			'key1[2].x'
+		],
+		result: 999
+	},
+	{
 		parameters: [['value0', 'value1', 'value2'], '[1]'],
 		result: 'value1'
 	}

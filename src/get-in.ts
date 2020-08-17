@@ -6,6 +6,10 @@ import { IPlainObject } from './types';
 import { toPath } from './to-path';
 import { isPlainObject } from './is-plain-object';
 
+// -----------------------------------------------------------------------------
+// Helper
+// -----------------------------------------------------------------------------
+
 /**
  * Convert string sample in to the path (array)
  * Inspired by final-form's `toPath` helper
