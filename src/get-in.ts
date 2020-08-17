@@ -12,8 +12,8 @@ import { isPlainObject } from './is-plain-object';
 
 /**
  * Convert string sample in to the path (array)
- * Inspired by final-form's `toPath` helper
- * {@link https://github.com/final-form/final-form/blob/master/src/structure/toPath.js}
+ * Inspired by final-form's `getIn` helper
+ * {@link https://github.com/final-form/final-form/blob/master/src/structure/getIn.js}
  * @param {IPlainObject|Array} sample
  * @param {string} keyPath
  */
