@@ -2,17 +2,16 @@
 // Deps
 // -----------------------------------------------------------------------------
 
-import { hello } from './index';
+import { isPlainObject } from './is-plain-object';
 
 // -----------------------------------------------------------------------------
-// Tests
+// Helper
 // -----------------------------------------------------------------------------
 
-describe('Return greeting message', () => {
-	['Oleg', 'Alex', 'John'].forEach((name, i) => {
-		test(`Test #${i + 1}`, () => {
-			const message = hello(name);
-			expect(message).toEqual(`Hi, ${name}!`);
-		});
-	});
-});
+/**
+ * @param sample
+ * @return {boolean}
+ */
+export function isEmptyObject(sample: any) {
+	return isPlainObject(sample) && Object.keys(sample).length === 0;
+}
