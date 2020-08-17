@@ -8,7 +8,7 @@ const regex = /(\[(?=\d+])|(?<=\[\d+)])|\.+/;
  * @param {string|null} [sample]
  * @returns {string[]}
  */
-export default (sample?: string | null): string[] => {
+export const toPath = (sample?: string | null): string[] => {
 	if (typeof sample === 'string' && sample.length > 0 && sample !== 'hasOwnProperty') {
 		if (!cache.hasOwnProperty(sample)) {
 			cache[sample] = sample
