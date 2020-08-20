@@ -2,24 +2,22 @@
 // Deps
 // -----------------------------------------------------------------------------
 
-import { isPlainObject } from './is-plain-object';
+import { IPlainObject } from './types';
 
 // -----------------------------------------------------------------------------
 // Helper
 // -----------------------------------------------------------------------------
 
 /**
- * @param sample
+ * @param {IPlainObject} sample
  * @return {boolean}
  */
-export function isEmptyObject(sample: any) {
+export function isEmptyObject(sample: IPlainObject) {
 	let empty = true;
-	if (isPlainObject(sample)) {
-		for (const key in sample) {
-			if (sample.hasOwnProperty(key)) {
-				empty = false;
-				break;
-			}
+	for (const key in sample) {
+		if (sample.hasOwnProperty(key)) {
+			empty = false;
+			break;
 		}
 	}
 	return empty;
