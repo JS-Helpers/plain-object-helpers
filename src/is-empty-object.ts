@@ -13,5 +13,14 @@ import { isPlainObject } from './is-plain-object';
  * @return {boolean}
  */
 export function isEmptyObject(sample: any) {
-	return isPlainObject(sample) && Object.keys(sample).length === 0;
+	let empty = true;
+	if (isPlainObject(sample)) {
+		for (const key in sample) {
+			if (sample.hasOwnProperty(key)) {
+				empty = false;
+				break;
+			}
+		}
+	}
+	return empty;
 }
