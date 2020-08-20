@@ -1,5 +1,13 @@
+// -----------------------------------------------------------------------------
+// Private
+// -----------------------------------------------------------------------------
+
 const cache: Record<string, string[]> = {};
 const regex = /(\[(?=\d+])|(?<=\[\d+)])|\.+/;
+
+// -----------------------------------------------------------------------------
+// Helper
+// -----------------------------------------------------------------------------
 
 /**
  * Convert string sample in to the path (array)
@@ -8,7 +16,7 @@ const regex = /(\[(?=\d+])|(?<=\[\d+)])|\.+/;
  * @param {string|null} [sample]
  * @returns {string[]}
  */
-export default (sample?: string | null): string[] => {
+export const toPath = (sample?: string | null): string[] => {
 	if (typeof sample === 'string' && sample.length > 0 && sample !== 'hasOwnProperty') {
 		if (!cache.hasOwnProperty(sample)) {
 			cache[sample] = sample
