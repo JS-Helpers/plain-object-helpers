@@ -21,6 +21,10 @@ const testCases: {
 		result: undefined
 	},
 	{
+		parameters: [{ key: 'value' }, 'ZZZ', 'fallbackValue'],
+		result: 'fallbackValue'
+	},
+	{
 		parameters: [
 			{
 				key1: {
@@ -41,6 +45,16 @@ const testCases: {
 			'key1[1]'
 		],
 		result: 'value1'
+	},
+	{
+		parameters: [
+			{
+				key1: ['value0', 'value1', 'value2']
+			},
+			'key1[10]',
+			'fallbackValue'
+		],
+		result: 'fallbackValue'
 	},
 	{
 		parameters: [
