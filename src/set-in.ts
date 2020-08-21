@@ -34,11 +34,24 @@ const setInRecursive = (
 		} else if (isPlainObject(current)) {
 			current[key] = value;
 		} else {
+			console.log(current);
 			throw new Error('Last chain must be an object or array');
 		}
 	} else {
-		if (isPlainObject(current)) {
-			if (!current.hasOwnProperty(key)) {
+		if (sampleIsArray) {
+			if (numberKey) {
+				if (!(Array.isArray(current[key]) || isPlainObject(current[key]))) {
+					current[key] = typeof path[nextIndex] === 'number' ? [] : {};
+				}
+				setInRecursive(current[key], value, path, nextIndex);
+			} else {
+				throw new Error(`Key \`${key}\` must be an array index (correct int)`);
+			}
+		} else if (isPlainObject(current)) {
+			if (
+				!current.hasOwnProperty(key) ||
+				!(Array.isArray(current[key]) || isPlainObject(current[key]))
+			) {
 				// setting inner prop based on next path index
 				current[key] = typeof path[nextIndex] === 'number' ? [] : {};
 			}

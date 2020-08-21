@@ -75,6 +75,42 @@ const testCases: {
 				}
 			]
 		}
+	},
+	{
+		parameters: [
+			{
+				key1: [
+					{
+						key3: 'prev value'
+					}
+				]
+			},
+			'key1[0].key3',
+			'new value'
+		],
+		result: {
+			key1: [
+				{
+					key3: 'new value'
+				}
+			]
+		}
+	},
+	{
+		parameters: [
+			{
+				key1: [null]
+			},
+			'key1[0].key3',
+			'new value'
+		],
+		result: {
+			key1: [
+				{
+					key3: 'new value'
+				}
+			]
+		}
 	}
 ];
 
