@@ -10,7 +10,7 @@ const regex = /(\[(?=\d+])|(?<=\[\d+)])|\.+/;
 // -----------------------------------------------------------------------------
 
 /**
- * Convert string sample in to the path (array)
+ * Convert string sample in to the props path
  * Inspired by final-form's `toPath` helper
  * {@link https://github.com/final-form/final-form/blob/master/src/structure/toPath.js}
  * @param {string|null} [sample]

@@ -10,7 +10,7 @@ import { isPlainObject } from './is-plain-object';
 // -----------------------------------------------------------------------------
 
 /**
- * Convert string sample in to the path (array)
+ * Getting value in Object or Array by path
  * Inspired by final-form's `getIn` helper
  * {@link https://github.com/final-form/final-form/blob/master/src/structure/getIn.js}
  * @param {*} sample

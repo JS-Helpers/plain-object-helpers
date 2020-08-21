@@ -5,6 +5,15 @@
 [![NPM package badge](https://img.shields.io/badge/npm-install-orange.svg)](https://www.npmjs.com/package/plain-object-helpers)
 ![Test and Build status badge](https://github.com/JS-Helpers/plain-object-helpers/workflows/Test%20and%20Build/badge.svg)
 
+## Helpers  
+
+- `getIn()`
+- `setIn()`
+- `toPath()`
+- `isPlaingObject()`
+- `isEmptyObject()`
+
+
 ## Coverage
 
 | Statements                                                                  | Branches                                                                    | Functions                                                                  | Lines                                                                  |
